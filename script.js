@@ -4,18 +4,22 @@ var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 
 function setGradient(){
-    body.style.background = 
-    "linear-gradient(to right, " 
-    + color1.value 
+    body.style.background =
+    "linear-gradient(to right, "
+    + color1.value
     + ", "
-    + color2.value 
+    + color2.value
     +")";
+    css.textContent = body.style.background + ";";
 }
 
 // body.style.background="red";
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
+
+// initialize background and CSS text on page load
+setGradient();
 
 // color2.addEventListener("input", function(){
     
